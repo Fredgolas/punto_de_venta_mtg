@@ -1,0 +1,32 @@
+<h1>Cartas</h1>
+<a href="/inventario/nueva-carta" >Añadir Nueva Carta</a>
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Cantidad disponible</th>
+        <th>Expansión</th>
+        <th>Número de Colección</th>
+        <th>Condición</th>
+        <th>Acabado</th>
+        <th>Imagen</th>
+        <th>Eliminar</th>
+    </tr>
+{% for card in object_list %}
+    <tr>
+        <td><a href="/inventario/modificar/{{card.pk}}">{{card.name}}</a></td>
+        <td>{{card.price}}</td>
+        <td>{{card.quantity}}</td>
+        <td>{{card.set}}</td>
+        <td>{{card.collector_number}}</td>
+        <td>{{card.condition}}</td>
+        {%if card.finish%}
+        <td>Foil</td>
+        {%else%}
+        <td>Normal</td>
+        {%endif%}
+        <td style="text-align: center;"><img src="{{card.img.url}}" style="width: 10%;height: 10%;"></img></td>
+        <td><a href="/inventario/eliminar/{{card.pk}}">Eliminar?</a></td>
+    </tr>
+{% endfor %}
+</table>
