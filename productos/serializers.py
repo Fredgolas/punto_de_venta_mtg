@@ -6,4 +6,4 @@ class CardSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Card
-        fields = ('name', 'price', 'quantity', 'types', 'set', 'collector_number', 'condition', 'finish')
+        fields = ('pk', 'name', 'price', 'quantity', 'types', 'set', 'collector_number', 'condition', 'finish')
