@@ -12,3 +12,16 @@ Punto de venta en línea para cartas de mtg
 |/cart/\<pk\>|Show cards|N/A|Update card \<pk\> in cart|Remove \<pk\> from cart|
 
 
+# Cards json structure
+```
+{
+    "name": "Plains",
+    "price": 0.05,
+    "quantity": 2,
+    "types": "Basic Land - Plains",
+    "set": "DMU",
+    "collector_number": 262,
+    "condition": "NM",
+    "finish": False,
+}
+``` 
