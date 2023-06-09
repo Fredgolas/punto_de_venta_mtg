@@ -1,4 +1,5 @@
 from django.db import models
+from usuarios.models import Cliente
 
 def set_directory_path(instance, filename) -> str:
     return f'uploads/{instance.set}/{filename}'
