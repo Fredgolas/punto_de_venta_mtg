@@ -22,7 +22,7 @@ class Card(models.Model):
     collector_number = models.IntegerField(default=262)
     condition = models.CharField(choices=CONDITIONS, default='NM', max_length=2)
     finish = models.BooleanField(default=False, choices=FOIL)
-    img = models.ImageField(upload_to=set_directory_path)
+    #img = models.ImageField(upload_to=set_directory_path)
     
     class Meta:
         ordering = ['name','price']
